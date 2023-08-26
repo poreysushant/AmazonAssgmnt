@@ -1,7 +1,10 @@
 package com.amazon.qa.pages;
 
 import java.io.IOException;
+import java.util.Set;
+
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -27,6 +30,14 @@ public class AmazonSearchPage
 	private WebElement price;
 	@FindBy(xpath="(//span[text()='Samsung Galaxy M32 Prime Edition (Black, 6GB RAM, 128GB)'])[1]")
 	private WebElement textassert2;
+	@FindBy(xpath="//iframe[@id=\"ape_Detail_ams-detail-right-v2_desktop_iframe\"]")private WebElement iframe;
+	@FindBy(xpath="//iframe[@id='checkoutPrefetch']")private WebElement iframeCart;
+	@FindBy(xpath="//span[@class=\"a-button-text a-declarative\"]")private WebElement btn_qnty;
+	@FindBy(xpath="//div[@class=\"sc-badge-price-to-pay\"]//descendant::span")private WebElement txt_price;
+	@FindBy(xpath="//span[@class=\"a-truncate-full a-offscreen\"]//following-sibling::span")private WebElement txt_name;
+
+	//span[@class="a-button-text a-declarative"]
+	//div[@class="sc-badge-price-to-pay"]//descendant::span
 	
 	public AmazonSearchPage(WebDriver driver)
 	{
@@ -58,6 +69,7 @@ public class AmazonSearchPage
      }
      public String getpriceasert()
      {
+    	 
     	String act3=price.getText();
     	 return act3;
      }
@@ -68,10 +80,17 @@ public class AmazonSearchPage
     	// UtilityClass.JavaScriptExcutor2(driver);
     	 addToCartbtn.click();
      }
-     public void clickCartbtn(WebDriver driver)
+     public void clickCartbtn(WebDriver driver) throws InterruptedException
      {
 
     	 Cartbtn.click();
+    	 //driver.switchTo().frame(driver.findElement(By.id("checkoutPrefetch")));
+    	 Thread.sleep(3000);
+    	 Cartbtn.click();
+//    	 Actions act=new Actions(driver);
+//    	 act.moveToElement(Cartbtn).click().build().perform();
+    	 
+    	 //Cartbtn.click();
      }
      
      public String gettextassert2()
@@ -90,5 +109,22 @@ public class AmazonSearchPage
       {
      	 signOutbutton2.click();
       }
+      public String verifyQuantity()
+      {
+    	  String act=btn_qnty.getText();
+    	  return act;
+      }
+      public String verifyPrice()
+      {
+    	  String act=txt_price.getText();
+    	  
+    	  return act;
+      }
+      public String verifyName()
+      {
+    	  String act=txt_name.getText();
+    	  return act;
+      }
+      
       
 }

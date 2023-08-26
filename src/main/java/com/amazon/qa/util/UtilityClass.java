@@ -29,7 +29,9 @@ public class UtilityClass
 		public static String  readConfigProp(String propName) throws IOException
 	{
 		Properties prop=new Properties();
-		FileInputStream file=new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\Automation_Assignment\\Confg.properties");
+		String a=System.getProperty("user.dir");
+		String b="\\Confg.properties";
+		FileInputStream file=new FileInputStream(a+"/"+b);
 		prop.load(file);
 		return prop.getProperty(propName);
 	}
@@ -47,6 +49,19 @@ public class UtilityClass
 			((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true)",element);
 		}
 		
+		public static void getWindowHandle(WebDriver driver)
+		{
+			Set<String> wnd = driver.getWindowHandles();
+		    
+		      Iterator<String> i = wnd.iterator();
+		      String prntw = i.next();
+		      String popwnd = i.next();
+		      
+		      driver.switchTo().window(popwnd);
+	
+
+		}
+
 		public static void JavaScriptExcutor2(WebDriver driver)
 		{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
