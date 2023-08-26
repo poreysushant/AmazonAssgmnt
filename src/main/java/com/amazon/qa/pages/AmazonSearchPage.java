@@ -1,6 +1,8 @@
 package com.amazon.qa.pages;
 
 import java.io.IOException;
+import java.util.Set;
+
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,6 +27,8 @@ public class AmazonSearchPage
 	@FindBy(xpath="//span[text()='Sign Out']")private WebElement signOutbutton2;
 	@FindBy(xpath="//div[@id=\"apex_desktop\"]//descendant::span[@data-a-size=\"xl\"]")
 	private WebElement price;
+	@FindBy(xpath="//iframe[@id=\"ape_Detail_ams-detail-right-v2_desktop_iframe\"]")private WebElement iframe;
+
 	
 	public AmazonSearchPage(WebDriver driver)
 	{
@@ -56,6 +60,7 @@ public class AmazonSearchPage
      }
      public String getpriceasert()
      {
+    	 
     	String act3=price.getText();
     	 return act3;
      }

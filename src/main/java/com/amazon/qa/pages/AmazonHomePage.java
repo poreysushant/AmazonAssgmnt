@@ -17,6 +17,8 @@ public class AmazonHomePage
 	@FindBy(xpath="//input[@id='ap_password']")private WebElement Password;
 	@FindBy(xpath="//input[@id='signInSubmit']")private WebElement signInButton;
 	@FindBy(xpath="//span[@id='nav-link-accountList-nav-line-1']")private WebElement assertusername;
+
+	//iframe[@id="ape_Detail_ams-detail-right-v2_desktop_iframe"]
 	
 	public AmazonHomePage(WebDriver driver)
 	{
@@ -69,4 +71,5 @@ public class AmazonHomePage
 		String act=assertusername.getText();
 		return act;
 	}
+	
 }
