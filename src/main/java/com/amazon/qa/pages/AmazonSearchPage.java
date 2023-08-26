@@ -19,8 +19,8 @@ public class AmazonSearchPage
 	private WebElement samsungmobile;
 	@FindBy(xpath="//span[text()='Samsung Galaxy M32 Prime Edition (Black, 6GB RAM, 128GB)']")
 	private WebElement samsungmobile1;
-	@FindBy(xpath="//input[@id=\"add-to-cart-button\"]")private WebElement addToCartbtn;
-	@FindBy(xpath="//span[@id='attach-sidesheet-view-cart-button-announce']")private WebElement Cartbtn;
+	@FindBy(xpath="//*[@id='submit.add-to-cart']/child::span")private WebElement addToCartbtn;
+	@FindBy(xpath="//form[@id='attach-view-cart-button-form']//span[@id='attach-sidesheet-view-cart-button-announce']")private WebElement Cartbtn;
 	@FindBy(xpath="//span[@id='nav-link-accountList-nav-line-1']")private WebElement signOutbutton1;
 	@FindBy(xpath="//span[text()='Sign Out']")private WebElement signOutbutton2;
 	@FindBy(xpath="//div[@id=\"apex_desktop\"]//descendant::span[@data-a-size=\"xl\"]")
@@ -60,13 +60,18 @@ public class AmazonSearchPage
     	 return act3;
      }
      
-     public void clickOnaddToCartbtn()
+     public void clickOnaddToCartbtn(WebDriver driver)
      {
+    	 UtilityClass.JavaScriptExcutor(driver,addToCartbtn);
+    	// UtilityClass.JavaScriptExcutor2(driver);
     	 addToCartbtn.click();
      }
-     public void clickCartbtn()
+     public void clickCartbtn(WebDriver driver)
      {
-    	 Cartbtn.click();
+    	 Actions act=new Actions(driver);
+    	 act.moveToElement(Cartbtn).click().build().perform();
+    	 
+    	 //Cartbtn.click();
      }
      public void movetoelement2(WebDriver driver)
    	 {
@@ -77,4 +82,5 @@ public class AmazonSearchPage
       {
      	 signOutbutton2.click();
       }
+      
 }

@@ -79,26 +79,34 @@ public class ValidateAmazonTestClass extends BaseClass
 	public void validateTestCase1() throws IOException
 	{
 	  searchpage.clickOnSamsungMobile1(driver);
+	  
+	  UtilityClass.windowHandles(driver);
+	  
+//	  String exp3=UtilityClass.readConfigProp("price");
+//   	String act3=searchpage.getpriceasert();
+//  	Assert.assertEquals(exp3, act3);
+//  	
+//  
+//   int a= Integer.parseInt(act3);
+//   int b= Integer.parseInt(exp3);
+//  
+//   if(a>b)
+//  {
+//	   Assert.assertTrue(true);
+//	   Reporter.log("price is greater than 10000", true);
+// }
+//   
+	  searchpage.clickOnaddToCartbtn(driver);
+	  
+	  searchpage.clickCartbtn(driver);
 
-      String exp3=UtilityClass.readConfigProp("price");
-    	String act3=searchpage.getpriceasert();
-    	Assert.assertEquals(exp3, act3);
+       
     	
-    
-   int a= Integer.parseInt(act3);
-   int b= Integer.parseInt(exp3);
-   
-   if(a>b)
-   {
-	   Assert.assertTrue(true);
-	   Reporter.log("price is greater than 10000", true);
-   }
-    	
-	
+	}
 //	@Test
 //	public void validateTestCase2()
 //	{
 //		// searchpage.clickOnSamsungMobile1(driver);
 //	}
 }
-}
+

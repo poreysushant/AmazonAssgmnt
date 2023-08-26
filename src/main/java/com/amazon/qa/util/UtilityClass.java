@@ -3,7 +3,9 @@ package com.amazon.qa.util;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -44,5 +46,27 @@ public class UtilityClass
 		{
 			((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true)",element);
 		}
-
+		
+		public static void JavaScriptExcutor2(WebDriver driver)
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,1000)", "");
+		}
+		public static void windowHandles(WebDriver driver)
+		{
+//			Set<String> ids=driver.getWindowHandles();
+//			ArrayList<String> id=new ArrayList<String>(ids);
+//			   
+//			   String child=id.get(1);
+//			   driver.switchTo().window(child);	
+			
+			      Set<String> wnd = driver.getWindowHandles();
+			    
+			      Iterator<String> i = wnd.iterator();
+			      String prntw = i.next();
+			      String popwnd = i.next();
+			      
+			      driver.switchTo().window(popwnd);
+		}
+	
 }
