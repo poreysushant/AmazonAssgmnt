@@ -3,11 +3,14 @@ package com.amazon.qa.test;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.amazon.qa.base.BaseClass;
 import com.amazon.qa.pages.AmazonHomePage;
@@ -76,32 +79,53 @@ public class ValidateAmazonTestClass extends BaseClass
 	}
 	
 	@Test
-	public void validateTestCase1() throws IOException
+	public void validateTestCase1() throws IOException, InterruptedException
 	{
 	  searchpage.clickOnSamsungMobile1(driver);
-	  
+//--	  
 	  UtilityClass.windowHandles(driver);
 	  
-//	  String exp3=UtilityClass.readConfigProp("price");
-//   	String act3=searchpage.getpriceasert();
-//  	Assert.assertEquals(exp3, act3);
-//  	
-//  
-//   int a= Integer.parseInt(act3);
-//   int b= Integer.parseInt(exp3);
-//  
-//   if(a>b)
-//  {
-//	   Assert.assertTrue(true);
-//	   Reporter.log("price is greater than 10000", true);
-// }
-//   
+	  String exp3=UtilityClass.readConfigProp("price");
+   	String act3=searchpage.getpriceasert();
+   	String act4=act3.substring(1);
+  	//Assert.assertEquals(exp3, act4);
+  	
+  
+   int a= Integer.parseInt(act4.replace(",", ""));
+   int b= Integer.parseInt(exp3);
+  
+   if(a>b)
+  {
+	   Assert.assertTrue(true);
+	   Reporter.log("price is greater than 10000", true);
+ }
+   //----
 	  searchpage.clickOnaddToCartbtn(driver);
-	  
+	  SoftAssert s=new SoftAssert();
 	  searchpage.clickCartbtn(driver);
+	  String a1=searchpage.verifyQuantity();
+	  String b1="Qty:1";
+	  Assert.assertEquals(a1, b1);
+	  
+	 String act= searchpage.verifyName();
+	 String exp="Samsung Galaxy M32 Prime Edition (Black, 6GB RAM, 128GB)";
+	  Assert.assertEquals(act, exp);
+	  
+	  String actprice=searchpage.verifyPrice();
+	  String expprice="  15,499.00";
+	  Assert.assertEquals(actprice,expprice);
 
        
     	
+	}
+	
+	@AfterMethod
+	public void afterMethods()
+	{
+		searchpage.movetoelement2(driver);
+		searchpage.clickOnsignOutbutton2();0
+		//driver.close();
+		
 	}
 //	@Test
 //	public void validateTestCase2()

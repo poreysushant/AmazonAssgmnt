@@ -5,6 +5,7 @@
     <classes>
       <class name="com.amazon.qa.test.ValidateAmazonTestClass">
         <methods>
+          <include name="afterMethods"/>
           <include name="loginToAmazon"/>
           <include name="validateTestCase1"/>
           <include name="launchAmazon"/>
