@@ -29,8 +29,9 @@ public class AmazonHomePage
 		act.moveToElement(signInbutton1).perform();;
 	}
 	
-	public void clickOnSignInButton()
+	public void clickOnSignInButton() 
 	{
+		
 		signInbutton2.click();	
 	}
 	

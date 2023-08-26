@@ -20,11 +20,13 @@ public class AmazonSearchPage
 	@FindBy(xpath="//span[text()='Samsung Galaxy M32 Prime Edition (Black, 6GB RAM, 128GB)']")
 	private WebElement samsungmobile1;
 	@FindBy(xpath="//*[@id='submit.add-to-cart']/child::span")private WebElement addToCartbtn;
-	@FindBy(xpath="//form[@id='attach-view-cart-button-form']//span[@id='attach-sidesheet-view-cart-button-announce']")private WebElement Cartbtn;
+	@FindBy(xpath="//input[@class=\"a-button-input\" and @aria-labelledby=\"attach-sidesheet-view-cart-button-announce\"]")private WebElement Cartbtn;
 	@FindBy(xpath="//span[@id='nav-link-accountList-nav-line-1']")private WebElement signOutbutton1;
 	@FindBy(xpath="//span[text()='Sign Out']")private WebElement signOutbutton2;
 	@FindBy(xpath="//div[@id=\"apex_desktop\"]//descendant::span[@data-a-size=\"xl\"]")
 	private WebElement price;
+	@FindBy(xpath="(//span[text()='Samsung Galaxy M32 Prime Edition (Black, 6GB RAM, 128GB)'])[1]")
+	private WebElement textassert2;
 	
 	public AmazonSearchPage(WebDriver driver)
 	{
@@ -68,11 +70,17 @@ public class AmazonSearchPage
      }
      public void clickCartbtn(WebDriver driver)
      {
-    	 Actions act=new Actions(driver);
-    	 act.moveToElement(Cartbtn).click().build().perform();
-    	 
-    	 //Cartbtn.click();
+
+    	 Cartbtn.click();
      }
+     
+     public String gettextassert2()
+     {
+    	 
+    	String act4=textassert2.getText();
+    	 return act4;
+     }
+     
      public void movetoelement2(WebDriver driver)
    	 {
   		Actions act=new Actions(driver);

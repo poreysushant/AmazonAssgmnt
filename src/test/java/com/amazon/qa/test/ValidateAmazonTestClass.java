@@ -3,8 +3,10 @@ package com.amazon.qa.test;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -76,7 +78,7 @@ public class ValidateAmazonTestClass extends BaseClass
 	}
 	
 	@Test
-	public void validateTestCase1() throws IOException
+	public void validateTestCase1() throws IOException, InterruptedException
 	{
 	  searchpage.clickOnSamsungMobile1(driver);
 	  
@@ -99,7 +101,13 @@ public class ValidateAmazonTestClass extends BaseClass
 	  searchpage.clickOnaddToCartbtn(driver);
 	  
 	  searchpage.clickCartbtn(driver);
-
+	  
+//
+//    Thread.sleep(1000);
+//      String exp4=UtilityClass.readConfigProp("Text4");
+//    	String act4=searchpage.gettextassert2();
+//    	Assert.assertEquals(exp4, act4);
+//      Reporter.log("Assert TextS amsung Galaxy M32 Prime Edition (Black, 6GB RAM, 128GB)", true);	 
        
     	
 	}
@@ -108,5 +116,12 @@ public class ValidateAmazonTestClass extends BaseClass
 //	{
 //		// searchpage.clickOnSamsungMobile1(driver);
 //	}
+	
+	@AfterMethod
+	public void logoutToAmazon()
+	{
+		searchpage.movetoelement2(driver);
+		searchpage.clickOnsignOutbutton2();
+	}
 }
 
