@@ -38,16 +38,32 @@
       <![CDATA[Assert redmi note 12 pro plus 5g]]>
     </line>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2023-08-28T16:34:20 IST" name="Default suite" finished-at="2023-08-28T16:35:37 IST" duration-ms="76597">
+=======
+  <suite started-at="2023-08-28T13:51:32 IST" name="Default suite" finished-at="2023-08-28T13:53:11 IST" duration-ms="99282">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2023-08-28T16:34:20 IST" name="Default test" finished-at="2023-08-28T16:35:37 IST" duration-ms="76597">
+=======
+    <test started-at="2023-08-28T13:51:32 IST" name="Default test" finished-at="2023-08-28T13:53:11 IST" duration-ms="99282">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
       <class name="com.amazon.qa.test.ValidateAmazonTestClass">
+<<<<<<< HEAD
         <test-method is-config="true" signature="launchAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:34:20 IST" name="launchAmazon" finished-at="2023-08-28T16:34:30 IST" duration-ms="9471" status="PASS">
+=======
+        <test-method is-config="true" signature="launchAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:51:32 IST" name="launchAmazon" finished-at="2023-08-28T13:51:45 IST" duration-ms="12815" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchAmazon -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="loginToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:34:30 IST" name="loginToAmazon" finished-at="2023-08-28T16:34:35 IST" duration-ms="5419" status="PASS">
+=======
+        <test-method is-config="true" signature="loginToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:51:45 IST" name="loginToAmazon" finished-at="2023-08-28T13:51:51 IST" duration-ms="5863" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
             <line>
               <![CDATA[Assert Text Email or mobile phone number]]>
@@ -60,6 +76,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loginToAmazon -->
+<<<<<<< HEAD
         <test-method signature="validateTestCase1()[pri:1, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:34:35 IST" name="validateTestCase1" finished-at="2023-08-28T16:34:50 IST" duration-ms="14578" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
@@ -145,17 +162,28 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+=======
+        <test-method signature="validateTestCase1()[pri:1, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:51:51 IST" name="validateTestCase1" finished-at="2023-08-28T13:52:15 IST" duration-ms="24350" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
             <line>
               <![CDATA[Assert Text Samsung m32 128gb mobile]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateTestCase1 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="logoutToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:34:50 IST" name="logoutToAmazon" finished-at="2023-08-28T16:34:51 IST" duration-ms="1328" status="PASS">
+=======
+        <test-method is-config="true" signature="logoutToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:52:15 IST" name="logoutToAmazon" finished-at="2023-08-28T13:52:17 IST" duration-ms="1939" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutToAmazon -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="loginToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:34:51 IST" name="loginToAmazon" finished-at="2023-08-28T16:34:55 IST" duration-ms="3354" status="PASS">
+=======
+        <test-method is-config="true" signature="loginToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:52:17 IST" name="loginToAmazon" finished-at="2023-08-28T13:52:22 IST" duration-ms="4297" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
             <line>
               <![CDATA[Assert Text Email or mobile phone number]]>
@@ -168,6 +196,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- loginToAmazon -->
+<<<<<<< HEAD
         <test-method signature="validateTestCase2()[pri:2, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:34:55 IST" name="validateTestCase2" finished-at="2023-08-28T16:35:08 IST" duration-ms="13168" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
@@ -244,17 +273,28 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+=======
+        <test-method signature="validateTestCase2()[pri:2, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:52:22 IST" name="validateTestCase2" finished-at="2023-08-28T13:52:40 IST" duration-ms="18648" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
             <line>
               <![CDATA[Assert apple mobile 14 pro max]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateTestCase2 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="logoutToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:35:08 IST" name="logoutToAmazon" finished-at="2023-08-28T16:35:09 IST" duration-ms="1620" status="PASS">
+=======
+        <test-method is-config="true" signature="logoutToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:52:40 IST" name="logoutToAmazon" finished-at="2023-08-28T13:52:42 IST" duration-ms="1846" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutToAmazon -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="loginToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:35:09 IST" name="loginToAmazon" finished-at="2023-08-28T16:35:12 IST" duration-ms="2906" status="PASS">
+=======
+        <test-method is-config="true" signature="loginToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:52:42 IST" name="loginToAmazon" finished-at="2023-08-28T13:52:46 IST" duration-ms="3959" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
             <line>
               <![CDATA[Assert Text Email or mobile phone number]]>
@@ -267,6 +307,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- loginToAmazon -->
+<<<<<<< HEAD
         <test-method signature="validateTestCase3()[pri:3, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:35:12 IST" name="validateTestCase3" finished-at="2023-08-28T16:35:27 IST" duration-ms="14480" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
@@ -343,12 +384,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+=======
+        <test-method signature="validateTestCase3()[pri:3, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:52:46 IST" name="validateTestCase3" finished-at="2023-08-28T13:53:09 IST" duration-ms="22963" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
             <line>
               <![CDATA[Assert redmi note 12 pro plus 5g]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateTestCase3 -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="logoutToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:35:27 IST" name="logoutToAmazon" finished-at="2023-08-28T16:35:37 IST" duration-ms="10191" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
@@ -430,10 +475,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+=======
+        <test-method is-config="true" signature="logoutToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:53:09 IST" name="logoutToAmazon" finished-at="2023-08-28T13:53:11 IST" duration-ms="1887" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutToAmazon -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@22555ebf]" started-at="2023-08-28T16:35:37 IST" name="closeBrowser" finished-at="2023-08-28T16:35:37 IST" duration-ms="0" status="SKIP">
+=======
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@4afcd809]" started-at="2023-08-28T13:53:11 IST" name="closeBrowser" finished-at="2023-08-28T13:53:11 IST" duration-ms="592" status="PASS">
+>>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
