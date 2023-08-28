@@ -15,7 +15,7 @@ public class BaseClass
 	{         driver=new ChromeDriver();
 	          driver.manage().window().maximize();     
 	          driver.manage().window().maximize();    
-	          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+  	          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	          driver.get("https://www.amazon.in/");
 }
 }
