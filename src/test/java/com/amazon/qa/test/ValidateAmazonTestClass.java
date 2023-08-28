@@ -146,7 +146,7 @@ public class ValidateAmazonTestClass extends BaseClass
 		Set<String> ids=driver.getWindowHandles();
 		ArrayList<String> id=new ArrayList<String>(ids);
 		   
-		   String child=id.get(2);
+		   String child=id.get(1);
 		   driver.switchTo().window(child);	
 		productpage2.clickOnaddToCartbtn2(driver);
 		productpage2.clickCartbtn2(driver);
@@ -164,7 +164,7 @@ public class ValidateAmazonTestClass extends BaseClass
 			Set<String> ids=driver.getWindowHandles();
 			ArrayList<String> id=new ArrayList<String>(ids);
 			   
-			   String child=id.get(3);
+			   String child=id.get(2);
 			   driver.switchTo().window(child);	
 		 productpage3.clickOnaddToCartbtn3(driver);
 			productpage3.clickCartbtn3(driver);
@@ -181,7 +181,7 @@ public class ValidateAmazonTestClass extends BaseClass
 	@AfterClass
 	public void closeBrowser()
 	{
-		driver.quit();
+	//	driver.quit();
 	}
 	
 	
