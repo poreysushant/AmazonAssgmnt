@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.amazon.qa.util.UtilityClass;
 
 public class AmazonProductPage1
@@ -17,9 +16,9 @@ public class AmazonProductPage1
 	@FindBy(xpath="//input[@id='nav-search-submit-button']")private WebElement submitbtn1;
 	@FindBy(xpath="//span[@class=\"a-color-state a-text-bold\"]")private WebElement textasert;
 
-	@FindBy(xpath="//span[text()='Samsung Galaxy M32 Prime Edition (Black, 6GB RAM, 128GB)']")
+	@FindBy(xpath="(//*[@class='a-section a-spacing-small a-spacing-top-small'])[5]//*[text()='(Refurbished) Samsung Galaxy M32 (Black, 6GB RAM, 128GB Storage']")
 	private WebElement samsungmobile1;
-	@FindBy(xpath="//div[@id=\"apex_desktop\"]//descendant::span[@data-a-size=\"xl\"]")
+	@FindBy(xpath="//div[@id=\"apex_desktop\"]/descendant::span[@class=\"a-price a-text-price a-size-medium apexPriceToPay\"]")
 	private WebElement price;
 	@FindBy(xpath="//*[@id='submit.add-to-cart']/child::span")private WebElement addToCartbtn;
 	@FindBy(xpath="//input[@class=\"a-button-input\" and @aria-labelledby=\"attach-sidesheet-view-cart-button-announce\"]")private WebElement Cartbtn;
