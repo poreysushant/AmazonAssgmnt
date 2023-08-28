@@ -55,89 +55,8 @@ public class ValidateAmazonTestClass extends BaseClass {
 		if (ex.contains(act)) {
 			Assert.assertTrue(true);
 		}
-<<<<<<< HEAD
-        Reporter.log("Assert Text Email or mobile phone number", true);
-        
-        home.EnterEmailOrMobilePhoneNumber();
-     	home.clickonContinueButton();
-     	
-     	String exp0=UtilityClass.readConfigProp("expected");
-     	String act0=home.AssetTextPassword();
-     	Assert.assertEquals(exp0, act0);
-        Reporter.log("Assert Text Password", true);
-     	
-     	home.enterPassword();
-  	    home.clickOnSignInButton2();
-  	    String exp1=UtilityClass.readConfigProp("UserName");
-  	    String act1=home.AssertLoggedUserName();
-  	  Assert.assertEquals(exp1, act1);
-      Reporter.log("Assert logged in username", true);
-     	
-   }
-	
-    @Test(priority=1)
-	public void validateTestCase1() throws IOException, InterruptedException
-	{   
-    	productpage1.EnterSearchTextbox1();
-    	productpage1.clickOnsubmitbtn1();
-    
-          String exp2=UtilityClass.readConfigProp("Text");
-  	      String act2=productpage1.gettextasert();
-  	      Assert.assertEquals(exp2, act2);
-          Reporter.log("Assert Text Samsung m32 128gb mobile", true);	    
-	
-          productpage1.clickOnSamsungMobile1(driver);	  
-	      UtilityClass.windowHandles(driver);
-	  
-	String exp3=UtilityClass.readConfigProp("price");
-   	String act3=productpage1.getpriceasert();
-   	String act4=act3.substring(1);
-  	
-   	
-   int a= Integer.parseInt(act4.replace(",", ""));
-   int b= Integer.parseInt(exp3);
-  
-   if(a>b)
-  {
-	   Assert.assertTrue(true);
-	   Reporter.log("price is greater than 10000", true);
- }
-   //--
-  
-     productpage1.clickOnaddToCartbtn(driver);
-	  SoftAssert s=new SoftAssert();
-	  productpage1.clickCartbtn(driver);  
-	 	  
-	  String a1=productpage1.verifyQuantity();
-	  String b1="Qty:1";
-	  Assert.assertEquals(a1, b1);
-	  
-	  String act= productpage1.verifyName();
-	  String exp="Samsung Galaxy M32 Prime Edition (Black, 6GB RAM, 128GB)";
-	  Assert.assertEquals(act, exp);
-	  
-//	  String actprice=searchpage.verifyPrice();
-//	  String expprice="  13,499.00";
-//	  Assert.assertEquals(actprice,expprice);    	
-
-	  String actprice=productpage1.verifyPrice();
-	  String expprice="  13,499.00";
-	  Assert.assertEquals(actprice,expprice);
-	  
-	}
-	
-=======
 		Reporter.log("Assert Text Email or mobile phone number", true);
->>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
 
-<<<<<<< HEAD
-	@Test(priority=2)
-	public void validateTestCase2() throws EncryptedDocumentException, IOException, InterruptedException
-	{
-
-		
-		//driver.close();
-=======
 		home.EnterEmailOrMobilePhoneNumber();
 		home.clickonContinueButton();
 
@@ -204,7 +123,6 @@ public class ValidateAmazonTestClass extends BaseClass {
 
 	@Test(priority = 2)
 	public void validateTestCase2() throws EncryptedDocumentException, IOException, InterruptedException {
->>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
 		productpage2.EnterSearchTextbox2();
 		productpage2.clickOnsubmitbtn2();
 
@@ -215,13 +133,6 @@ public class ValidateAmazonTestClass extends BaseClass {
 
 		productpage2.clickonAppleMobile(driver);
 
-<<<<<<< HEAD
-		Set<String> ids=driver.getWindowHandles();
-		ArrayList<String> id=new ArrayList<String>(ids);
-		   
-		   String child=id.get(1);
-		   driver.switchTo().window(child);	
-=======
 		Set<String> ids = driver.getWindowHandles();
 		ArrayList<String> id = new ArrayList<String>(ids);
 
@@ -240,7 +151,6 @@ public class ValidateAmazonTestClass extends BaseClass {
 			Reporter.log("price is greater than 10000", true);
 		}
 
->>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
 		productpage2.clickOnaddToCartbtn2(driver);
 		productpage2.clickCartbtn2(driver);
 
@@ -273,23 +183,14 @@ public class ValidateAmazonTestClass extends BaseClass {
 
 		productpage3.clickonRedmeMobile(driver);
 		// UtilityClass.windowHandles(driver);
-<<<<<<< HEAD
-		 
-			Set<String> ids=driver.getWindowHandles();
-			ArrayList<String> id=new ArrayList<String>(ids);
-			   
-			   String child=id.get(2);
-			   driver.switchTo().window(child);	
-		 productpage3.clickOnaddToCartbtn3(driver);
-			productpage3.clickCartbtn3(driver);
-		
-=======
 
 		Set<String> ids = driver.getWindowHandles();
 		ArrayList<String> id = new ArrayList<String>(ids);
 
-		String child = id.get(3);
+		String child = id.get(2);
 		driver.switchTo().window(child);
+		productpage3.clickOnaddToCartbtn3(driver);
+		productpage3.clickCartbtn3(driver);
 
 		String expRP3 = UtilityClass.readConfigProp("price");
 		String actRP3 = productpage3.getpriceasert3();
@@ -323,7 +224,6 @@ public class ValidateAmazonTestClass extends BaseClass {
 		Assert.assertEquals(actprice, expprice);
 		Reporter.log("price successfully validate", true);
 
->>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
 	}
 
 	@AfterMethod
@@ -334,14 +234,9 @@ public class ValidateAmazonTestClass extends BaseClass {
 	}
 
 	@AfterClass
-<<<<<<< HEAD
-	public void closeBrowser()
-	{
-	//	driver.quit();
-=======
+
 	public void closeBrowser() {
 		driver.quit();
->>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
 	}
 
 }

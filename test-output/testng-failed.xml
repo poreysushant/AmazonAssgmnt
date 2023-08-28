@@ -8,10 +8,9 @@
           <include name="loginToAmazon"/>
           <include name="validateTestCase1"/>
           <include name="closeBrowser"/>
-<<<<<<< HEAD
           <include name="launchAmazon"/>
-=======
->>>>>>> branch 'master' of https://github.com/poreysushant/AmazonAssgmnt.git
+          <include name="validateTestCase3"/>
+          <include name="validateTestCase2"/>
           <include name="logoutToAmazon"/>
         </methods>
       </class> <!-- com.amazon.qa.test.ValidateAmazonTestClass -->
