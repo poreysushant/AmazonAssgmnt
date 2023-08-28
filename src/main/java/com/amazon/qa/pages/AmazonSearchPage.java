@@ -15,104 +15,24 @@ import com.amazon.qa.util.UtilityClass;
 
 public class AmazonSearchPage 
 {
-	@FindBy(xpath="//input[@id='twotabsearchtextbox']")private WebElement searchtextbox;
-	@FindBy(xpath="//input[@id='nav-search-submit-button']")private WebElement submitbtn;
-	@FindBy(xpath="//span[@class=\"a-color-state a-text-bold\"]")private WebElement textasert;
-	@FindBy(xpath="//span[text()='(Refurbished) Samsung Galaxy M32 (Black, 6GB RAM, 128GB Storage)']")
-	private WebElement samsungmobile;
-	@FindBy(xpath="//span[text()='Samsung Galaxy M32 Prime Edition (Black, 6GB RAM, 128GB)']")
-	private WebElement samsungmobile1;
-	@FindBy(xpath="//*[@id='submit.add-to-cart']/child::span")private WebElement addToCartbtn;
-	@FindBy(xpath="//input[@class=\"a-button-input\" and @aria-labelledby=\"attach-sidesheet-view-cart-button-announce\"]")private WebElement Cartbtn;
-	@FindBy(xpath="//span[@id='nav-link-accountList-nav-line-1']")private WebElement signOutbutton1;
-	@FindBy(xpath="//span[text()='Sign Out']")private WebElement signOutbutton2;
-	@FindBy(xpath="//div[@id=\"apex_desktop\"]//descendant::span[@data-a-size=\"xl\"]")
-	private WebElement price;
-	@FindBy(xpath="//iframe[@id=\"ape_Detail_ams-detail-right-v2_desktop_iframe\"]")private WebElement iframe;
-	@FindBy(xpath="//iframe[@id='checkoutPrefetch']")private WebElement iframeCart;
-	@FindBy(xpath="//span[@class=\"a-button-text a-declarative\"]")private WebElement btn_qnty;
-	@FindBy(xpath="//div[@class=\"sc-badge-price-to-pay\"]//descendant::span")private WebElement txt_price;
-	@FindBy(xpath="//span[@class=\"a-truncate-full a-offscreen\"]//following-sibling::span")private WebElement txt_name;
+	@FindBy(xpath="(//span[text()='Samsung Galaxy M32 Prime Edition (Black, 6GB RAM, 128GB)'])[1]")
+	private WebElement textassert2;
 
-	//span[@class="a-button-text a-declarative"]
-	//div[@class="sc-badge-price-to-pay"]//descendant::span
 	
 	public AmazonSearchPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver,this);
 	}
-     public void EnterSearchTextbox() throws EncryptedDocumentException, IOException
-     {
-    	 searchtextbox.sendKeys(UtilityClass.readDataFromExcel(0, 0));
-     }
-     
-     public void clickOnsubmitbtn()
-     {
-    	 submitbtn.click();
-     }
-     public String gettextasert()
-     {
-    	String act2=textasert.getText();
-    	 return act2;
-     }
-     public void clickOnSamsungMobile(WebDriver driver)
-     {
-    	 UtilityClass.JavaScriptExcutor(driver,samsungmobile);
-    	 samsungmobile.click();
-     }
-     public void clickOnSamsungMobile1(WebDriver driver)
-     {
-    	 UtilityClass.JavaScriptExcutor(driver,samsungmobile1);
-    	 samsungmobile1.click();
-     }
-     public String getpriceasert()
+
+     public String gettextassert2()
      {
     	 
-    	String act3=price.getText();
-    	 return act3;
+    	String act4=textassert2.getText();
+    	 return act4;
      }
      
-     public void clickOnaddToCartbtn(WebDriver driver)
-     {
-    	 UtilityClass.JavaScriptExcutor(driver,addToCartbtn);
-    	// UtilityClass.JavaScriptExcutor2(driver);
-    	 addToCartbtn.click();
-     }
-     public void clickCartbtn(WebDriver driver) throws InterruptedException
-     {
-    	 //driver.switchTo().frame(driver.findElement(By.id("checkoutPrefetch")));
-    	 Thread.sleep(3000);
-    	 Cartbtn.click();
-//    	 Actions act=new Actions(driver);
-//    	 act.moveToElement(Cartbtn).click().build().perform();
-    	 
-    	 //Cartbtn.click();
-     }
-     public void movetoelement2(WebDriver driver)
-   	 {
-  		Actions act=new Actions(driver);
-  		act.moveToElement(signOutbutton1).perform();;
-  	 }
-      public void clickOnsignOutbutton2()
-      {
-     	 signOutbutton2.click();
-      }
-      public String verifyQuantity()
-      {
-    	  String act=btn_qnty.getText();
-    	  return act;
-      }
-      public String verifyPrice()
-      {
-    	  String act=txt_price.getText();
-    	  
-    	  return act;
-      }
-      public String verifyName()
-      {
-    	  String act=txt_name.getText();
-    	  return act;
-      }
+    
+
       
       
 }

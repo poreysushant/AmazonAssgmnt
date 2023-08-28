@@ -13,6 +13,7 @@ public class BaseClass
 	public WebDriver driver;
 	public void openApplication() throws InterruptedException
 	{         driver=new ChromeDriver();
+	          driver.manage().window().maximize();     
 	          driver.manage().window().maximize();    
 	          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	          driver.get("https://www.amazon.in/");

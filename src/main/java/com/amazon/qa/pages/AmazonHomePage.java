@@ -18,7 +18,9 @@ public class AmazonHomePage
 	@FindBy(xpath="//input[@id='signInSubmit']")private WebElement signInButton;
 	@FindBy(xpath="//span[@id='nav-link-accountList-nav-line-1']")private WebElement assertusername;
 
-	//iframe[@id="ape_Detail_ams-detail-right-v2_desktop_iframe"]
+
+	@FindBy(xpath="//a[@id='nav-link-accountList']")private WebElement signOutbutton1;
+	@FindBy(xpath="//span[text()='Sign Out']")private WebElement signOutbutton2;
 	
 	public AmazonHomePage(WebDriver driver)
 	{
@@ -31,8 +33,9 @@ public class AmazonHomePage
 		act.moveToElement(signInbutton1).perform();;
 	}
 	
-	public void clickOnSignInButton()
+	public void clickOnSignInButton() 
 	{
+		
 		signInbutton2.click();	
 	}
 	
@@ -72,4 +75,13 @@ public class AmazonHomePage
 		return act;
 	}
 	
+	public void movetoelement2(WebDriver driver)
+  	 {
+ 		Actions act=new Actions(driver);
+ 		act.moveToElement(signOutbutton1).perform();;
+ 	 }
+     public void clickOnsignOutbutton2()
+     {
+    	 signOutbutton2.click();
+     }
 }
