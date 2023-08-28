@@ -17,16 +17,16 @@
       <![CDATA[price is greater than 10000]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-08-26T23:32:51 IST" name="Default suite" finished-at="2023-08-26T23:33:26 IST" duration-ms="34981">
+  <suite started-at="2023-08-27T18:17:24 IST" name="Default suite" finished-at="2023-08-27T18:18:07 IST" duration-ms="42316">
     <groups>
     </groups>
-    <test started-at="2023-08-26T23:32:51 IST" name="Default test" finished-at="2023-08-26T23:33:26 IST" duration-ms="34981">
+    <test started-at="2023-08-27T18:17:24 IST" name="Default test" finished-at="2023-08-27T18:18:07 IST" duration-ms="42316">
       <class name="com.amazon.qa.test.ValidateAmazonTestClass">
-        <test-method is-config="true" signature="launchAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@7c7a06ec]" started-at="2023-08-26T23:32:51 IST" name="launchAmazon" finished-at="2023-08-26T23:32:57 IST" duration-ms="5828" status="PASS">
+        <test-method is-config="true" signature="launchAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@7c7a06ec]" started-at="2023-08-27T18:17:24 IST" name="launchAmazon" finished-at="2023-08-27T18:17:30 IST" duration-ms="6110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchAmazon -->
-        <test-method is-config="true" signature="loginToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@7c7a06ec]" started-at="2023-08-26T23:32:57 IST" name="loginToAmazon" finished-at="2023-08-26T23:33:10 IST" duration-ms="12931" status="PASS">
+        <test-method is-config="true" signature="loginToAmazon()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@7c7a06ec]" started-at="2023-08-27T18:17:31 IST" name="loginToAmazon" finished-at="2023-08-27T18:17:44 IST" duration-ms="13250" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Assert Text Email or mobile phone number]]>
@@ -42,14 +42,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- loginToAmazon -->
-        <test-method signature="validateTestCase1()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@7c7a06ec]" started-at="2023-08-26T23:33:10 IST" name="validateTestCase1" finished-at="2023-08-26T23:33:24 IST" duration-ms="14356" status="PASS">
+        <test-method signature="validateTestCase1()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@7c7a06ec]" started-at="2023-08-27T18:17:44 IST" name="validateTestCase1" finished-at="2023-08-27T18:18:05 IST" duration-ms="21146" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[price is greater than 10000]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateTestCase1 -->
-        <test-method is-config="true" signature="afterMethods()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@7c7a06ec]" started-at="2023-08-26T23:33:24 IST" name="afterMethods" finished-at="2023-08-26T23:33:26 IST" duration-ms="1798" status="PASS">
+        <test-method is-config="true" signature="afterMethods()[pri:0, instance:com.amazon.qa.test.ValidateAmazonTestClass@7c7a06ec]" started-at="2023-08-27T18:18:05 IST" name="afterMethods" finished-at="2023-08-27T18:18:07 IST" duration-ms="1721" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethods -->

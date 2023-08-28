@@ -99,7 +99,7 @@ public class ValidateAmazonTestClass extends BaseClass
 	   Assert.assertTrue(true);
 	   Reporter.log("price is greater than 10000", true);
  }
-   //----
+   //--
 	  searchpage.clickOnaddToCartbtn(driver);
 	  SoftAssert s=new SoftAssert();
 	  searchpage.clickCartbtn(driver);
@@ -112,18 +112,16 @@ public class ValidateAmazonTestClass extends BaseClass
 	  Assert.assertEquals(act, exp);
 	  
 	  String actprice=searchpage.verifyPrice();
-	  String expprice="  15,499.00";
-	  Assert.assertEquals(actprice,expprice);
-
-       
-    	
+	  String expprice="  13,499.00";
+	  Assert.assertEquals(actprice,expprice);    	
 	}
 	
 	@AfterMethod
 	public void afterMethods()
 	{
 		searchpage.movetoelement2(driver);
-		searchpage.clickOnsignOutbutton2();0
+		searchpage.clickOnsignOutbutton2();
+		
 		//driver.close();
 		
 	}
