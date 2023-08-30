@@ -187,8 +187,10 @@ public class ValidateAmazonTestClass extends BaseClass {
 		Set<String> ids = driver.getWindowHandles();
 		ArrayList<String> id = new ArrayList<String>(ids);
 
-		String child = id.get(3);
+		String child = id.get(2);
 		driver.switchTo().window(child);
+		productpage3.clickOnaddToCartbtn3(driver);
+		productpage3.clickCartbtn3(driver);
 
 		String expRP3 = UtilityClass.readConfigProp("price");
 		String actRP3 = productpage3.getpriceasert3();
@@ -232,6 +234,7 @@ public class ValidateAmazonTestClass extends BaseClass {
 	}
 
 	@AfterClass
+
 	public void closeBrowser() {
 		driver.quit();
 	}
